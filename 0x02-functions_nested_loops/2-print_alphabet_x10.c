@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 
 	while (circle < 10)
 	{
-		myLetter = 'a'
+		myLetter = 'a';
 		while (myLetter <= 'z')
 		{
 			_putchar(myLetter);
