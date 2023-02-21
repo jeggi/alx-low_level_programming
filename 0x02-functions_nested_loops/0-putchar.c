@@ -1,10 +1,12 @@
 #include "main.h"
 /**
-* main - this is for function putchar
-* Description: alphabets printing
-* Return: 0;
+* main - prints _putchar
+*
+* Description: prints _putchar
+*
+* Return: 0 (success)
 */
-void print_alphabet(void)
+int main(void)
 {
 int s = 'a';
 while (s <= 'z')
