@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-* main - this is for function
-* description: alphabets printing
+* main - this is for function putchar
+* Description: alphabets printing
 * Return: 0;
 */
 void print_alphabet(void)
@@ -9,8 +9,8 @@ void print_alphabet(void)
 int s = 'a';
 while (s <= 'z')
 {
-putchar(s);
+_putchar(s);
 s++
 }
-putchar("\n");
+_putchar("\n");
 }
