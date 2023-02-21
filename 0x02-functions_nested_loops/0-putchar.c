@@ -4,7 +4,7 @@
 * description: alphabets printing
 * Return: 0;
 */
-int main(void)
+void print_alphabet(void)
 {
 int s = 'a';
 while (s <= 'z')
