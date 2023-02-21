@@ -15,6 +15,6 @@ void print_alphabet(void)
 			myLetter++;
 
 		}
-		_putchar('\n);
+		_putchar('\n');
 }
 
