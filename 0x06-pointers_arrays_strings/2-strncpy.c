@@ -16,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 	return (ptr);
 }
 while ((*dest++ = *src++));
-	while (n--)
+while (n--)
 	*dest++ = 0;
 
 return (ptr);
