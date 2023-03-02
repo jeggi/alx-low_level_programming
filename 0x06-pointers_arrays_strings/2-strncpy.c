@@ -1,23 +1,25 @@
 #include "main.h"
 
 /**
- * * _strncpy - Copies at most an inputted number
- * @dest: The buffer storing the string copy.
- * @src: thsfkd
- * @n: llkfks
- * Return: 0
+ * _strncpy - two words
+ * @dest : pointer to char params
+ * @src : pointer to char params
+ * @n : int params
+ * Return: *dest
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *ptr = dest;
+	int i;
 
-	do {
-	if (!n--)
-	return (ptr);
-}
-while ((*dest++ = *src++));
-while (n--)
-	*dest++ = 0;
+	for (i = 0; src[i] != '\0' && i < n; i++)
+	{
+		dest[i] = src[i];
+	}
 
-return (ptr);
+	for ( ; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
+	return (dest);
 }
