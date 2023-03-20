@@ -1,0 +1,8 @@
+factoria of 4
+4*3*2*1 = 24
+
+variable i;
+
+(4 * i) (3*i) (2*i) (1*i)
+
+
