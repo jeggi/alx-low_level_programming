@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "stdio.h"
 
 /**
 *print_list - function that prints all the element of a list
@@ -6,7 +7,7 @@
 *Return: the number of the nodes
 */
 
-size_t print_listit(const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
 	const listint_t *c = h;
 	size_t cnodes = 0;
