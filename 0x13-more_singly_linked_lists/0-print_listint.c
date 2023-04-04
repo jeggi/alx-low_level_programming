@@ -9,16 +9,15 @@
 
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *c = h;
-	size_t cnodes = 0;
+    const listint_t *current = h;
+    size_t s = 0;
 
-	while (c)
-	{
-		printf("%i\n", h->n);
-		c = c->next;
-		cnodes++;
-	}
+    while (current)
+    {
+        printf("%d\n", current->n);
+        s++;
+        current = current->next;
+    }
 
-return (cnodes);
-
-}		
+    return (s);
+}

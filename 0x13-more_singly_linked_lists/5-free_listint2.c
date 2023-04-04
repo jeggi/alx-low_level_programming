@@ -6,17 +6,15 @@
 */
 void free_listint2(listint_t **head)
 {
-	listint_t *tempo;
-	listint_t *current;
+    listint_t *current_node;
 
-	if (head != NULL)
-	{
-		current = *head;
-		while ((tempo = current) != NULL)
-		{
-			current = current->next;
-			free(tempo);
-		}
-		*head = NULL;
-	}
+    if (head == NULL)
+        return;
+
+    while (*head != NULL)
+    {
+        current_node = *head;
+        *head = (*head)->next;
+        free(current_node);
+    }
 }
