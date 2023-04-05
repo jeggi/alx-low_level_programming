@@ -2,7 +2,7 @@
 
 /**
  * listint_len - returns lisnked list elements number
- * @hL head of a list
+ * @h: head of a list
  * Return: numbers of nodes.
  */
 
