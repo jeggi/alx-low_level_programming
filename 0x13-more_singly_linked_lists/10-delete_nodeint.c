@@ -6,7 +6,7 @@
  *@index: unsinged integer of the node
  *Return: 1 if it is successful
  */
- 
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i;
