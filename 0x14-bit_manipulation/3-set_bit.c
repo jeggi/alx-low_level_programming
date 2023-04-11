@@ -5,16 +5,15 @@
  *@index: The index of bit
  *Return: 1 means it works -1 if not
  */
- int set_bit(unsigned long int *n, unsigned int index)
- {
-	 unsigned int s;
+int set_bit(unsigned long int *n, unsigned int index)
+{
+	unsigned int s;
 
-	 if (index => 64)
-		 return (-1);
+	if (index > 63)
+		return (-1);
 
-	 s = 1 << index;
-	 *n = (*n | m);
+	s = 1 << index;
+	*n = (*n | m);
 
-	 return (1)
- }
- 
+	return (1);
+}
