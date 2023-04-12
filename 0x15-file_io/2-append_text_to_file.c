@@ -5,10 +5,9 @@
  *@text_content: This is the content of the file
  *Return: 1 on succuess and -1 on failure
  */
- 
 int append_text_to_file(const char *filename, char *text_content)
 {
-    int doc, letters, rwr;
+	int doc, nwletters, rw;
 
 	if (!filename)
 		return (-1);
@@ -20,12 +19,12 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		for (letters = 0; text_content[letters]; letters++)
+		for (nwletters = 0; text_content[nwletters]; nwletters++)
 			;
 
-		rwr = write(doc, text_content, letters);
+		rw = write(doc, text_content, nwletters);
 
-		if (rwr == -1)
+		if (rw == -1)
 			return (-1);
 	}
 
