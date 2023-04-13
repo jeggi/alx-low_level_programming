@@ -29,7 +29,7 @@ void error_file(int doc_from, int doc_to, char *argv[])
 int main(int argc, char *argv[])
 {
 	int doc_from, doc_to, err_close;
-	ssize_t nwchar, nwr;
+	ssize_t nchars, nwr;
 	char buf[1024];
 
 	if (argc != 3)
@@ -42,13 +42,13 @@ int main(int argc, char *argv[])
 	doc_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(doc_from, doc_to, argv);
 
-	nwchar = 1024;
-	while (nwchar == 1024)
+	nchars = 1024;
+	while (nchars == 1024)
 	{
-		nwchar = read(doc_from, buf, 1024);
-		if (nwchar == -1)
+		nchars = read(doc_from, buf, 1024);
+		if (nchars == -1)
 			error_file(-1, 0, argv);
-		nwr = write(doc_to, buf, nwchar);
+		nwr = write(doc_to, buf, nchars);
 		if (nwr == -1)
 			error_file(0, -1, argv);
 	}
