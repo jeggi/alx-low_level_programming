@@ -1,34 +1,36 @@
 #include "main.h"
+
 /**
-*read_textfile - this function that reads a text file.
-*@filename: the text file
-*@letters: every letters
-*Return: actual number of letters
+* read_textfile - this function that reads a text file.
+* @filename: the text file.
+* @letters: every letters.
+*
+* Return: actual number of letters 0 if it fails.
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t nrd, nwr;
 	char *buf;
+	ssize_t s, w;
+	int doc;
 
-	if (!filename)
+	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
+	doc = open(filename, O_RDONLY);
 
-	if (fd == -1)
+	if (doc == -1)
 		return (0);
 
 	buf = malloc(sizeof(char) * (letters));
-	if (!buf)
+	if (buf == NULL)
 		return (0);
 
-	nrd = read(fd, buf, letters);
-	nwr = write(STDOUT_FILENO, buf, nrd);
+	s = read(doc, buf, letters);
+	w = write(STDOUT_FILENO, buf, s);
 
-	close(fd);
+	close(doc);
 
 	free(buf);
 
-	return (nwr);
+	return (w);
 }
